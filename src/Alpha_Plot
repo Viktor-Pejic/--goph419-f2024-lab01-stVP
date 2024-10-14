@@ -60,31 +60,30 @@ def inv_sin(x):
 
 
 def main():
-
+    ve_v0 = 2.0
     tol_alpha = 0.04
-    alpha = 0.25
 
-    ve_v0_values = np.linspace(1.4, 2, 100)
+    alpha_values = np.linspace(0.01, 0.04, 100)
 
     max_angles = []
     min_angles = []
 
-    for ve_v0 in ve_v0_values:
+    for alpha in alpha_values:
 
         angles = launch_angle_range(ve_v0, alpha, tol_alpha)
         min_angles.append(angles[1])
         max_angles.append(angles[0])
 
     plt.figure(figsize=(10, 5))
-    plt.plot(ve_v0_values, max_angles, label='Maximum angle', linewidth = 2)
-    plt.plot(ve_v0_values, min_angles, label='Minimum angle', linewidth=2)
+    plt.plot(alpha_values, max_angles, label='Maximum angle', linewidth = 2)
+    plt.plot(alpha_values, min_angles, label='Minimum angle', linewidth=2)
 
     plt.title('Minimum and Maximum Launch Angles vs. Desired Maximum Altitude')
-    plt.xlabel('Ve/V0')
+    plt.xlabel('Alpha')
     plt.ylabel('Launch angle')
     plt.legend()
 
-    plt.savefig('C:/Users/Viktor/Labs/Lab-1/figures/Min_and_Max_Angles_vs_VeV0.png')
+    plt.savefig('C:/Users/Viktor/Desktop/Min_and_Max_Angles_vs_Alpha.png')
 
     plt.show()
 
