@@ -63,9 +63,8 @@ def main():
 
     tol_alpha = 0.04
     alpha = 0.25
-    max_ve_v0 = ((1 + alpha)/alpha)**0.5
 
-    ve_v0_values = np.linspace(0, max_ve_v0, 100)
+    ve_v0_values = np.linspace(1.4, 2, 100)
 
     max_angles = []
     min_angles = []
