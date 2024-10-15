@@ -28,7 +28,7 @@ def launch_angle(ve_v0, alpha):
     term = 1 - (alpha / (1 + alpha)) * (ve_v0 ** 2)
 
     if term < 0:
-        print(f"Warning: Invalid term for alpha={alpha}: {term}. Setting sin_phi to 0.")
+        print(f"Warning: Invalid term under the square root. Setting sin_phi to 0.")
         return 0
 
     sin_phi = (1 + alpha) * (term ** 0.5)
