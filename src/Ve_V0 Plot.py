@@ -79,7 +79,7 @@ def main():
     plt.plot(ve_v0_values, max_angles, label='Maximum angle', linewidth = 2)
     plt.plot(ve_v0_values, min_angles, label='Minimum angle', linewidth=2)
 
-    plt.title('Minimum and Maximum Launch Angles vs. Desired Maximum Altitude')
+    plt.title('Minimum and Maximum Launch Angles vs. ve_v0')
     plt.xlabel('Ve/V0')
     plt.ylabel('Launch angle')
     plt.legend()
